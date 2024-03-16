@@ -1,0 +1,5 @@
+#!/bin/bash
+ml purge
+ml Clang/10.0.1-GCCcore-9.3.0
+rm -f test1
+make

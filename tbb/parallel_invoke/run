@@ -1,0 +1,2 @@
+#!/bin/bash
+TBB_VERSION=1 ./test1 >log.out 2>log.err

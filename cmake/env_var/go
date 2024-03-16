@@ -1,0 +1,6 @@
+#!/bin/sh
+# Use the most recent versions installed!
+ml purge && ml foss && ml CMake
+cmake . -DMYVAR=hello_world
+make
+

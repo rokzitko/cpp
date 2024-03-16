@@ -1,0 +1,3 @@
+#!/bin/bash
+LANG=C singularity run ${HOME}/containers.singularity/oneapi/oneapi_beta07.sif ./test1
+

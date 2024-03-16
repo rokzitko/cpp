@@ -1,0 +1,7 @@
+#!/bin/sh
+# Use the most recent versions installed!
+ml purge && ml foss && ml CMake
+mkdir -p build
+cd build
+cmake ..
+make

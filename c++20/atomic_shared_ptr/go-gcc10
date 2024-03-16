@@ -1,0 +1,7 @@
+#!/bin/bash
+ml purge
+ml GCCcore/10.2.0
+rm -f test1
+export CXX=g++
+${CXX} --version
+make

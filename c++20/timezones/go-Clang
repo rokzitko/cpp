@@ -1,0 +1,6 @@
+#!/bin/bash
+ml purge
+ml Clang
+clang++ --version
+rm -f test1
+make

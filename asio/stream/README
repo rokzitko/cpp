@@ -1,0 +1,5 @@
+receive with:
+
+nc --recv-only localhost 1234 >file
+
+Za sprejemanje: nc -l localhost -p PORT
