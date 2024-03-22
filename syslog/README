@@ -1,1 +1,17 @@
 https://stackoverflow.com/questions/2638654/redirect-c-stdclog-to-syslog-on-unix
+https://en.wikipedia.org/wiki/Syslog
+https://en.wikipedia.org/wiki/Rsyslog
+https://www.rsyslog.com/newbie-guide-to-rsyslog/
+https://www.rsyslog.com/writing-specific-messages-to-a-file-and-discarding-them/
+
+https://www.rsyslog.com/sending-messages-to-a-remote-syslog-server/
+
+*.*  action(type="omfwd" target="192.0.2.2" port="10514" protocol="tcp"
+            action.resumeRetryCount="100"
+            queue.type="linkedList" queue.size="10000")
+# this will de-couple the sending from the other logging actions,
+# and prevent delays when the remote system is not reachable. Also,
+# it will try to connect 100 times before it discards messages as
+# undeliverable.
+
+systemctl restart rsyslog.service
