@@ -1,4 +1,4 @@
-CXXFLAGS=-std=c++23
+CXXFLAGS=-std=c++23 -Wl,-rpath ${LD_LIBRARY_PATH}
 
 .PHONY: all
 
