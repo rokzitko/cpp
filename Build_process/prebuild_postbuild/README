@@ -1,0 +1,22 @@
+https://stackoverflow.com/questions/1612278/pre-build-step-in-makefile
+
+
+https://stackoverflow.com/questions/3477292/what-do-and-do-as-prefixes-to-recipe-lines-in-make
+
+
+They control the behaviour of make for the tagged command lines:
+
+    @ suppresses the normal 'echo' of the command that is executed.
+
+    - means ignore the exit status of the command that is executed (normally, a non-zero exit status would stop that part of the build).
+
+    + means 'execute this command under make -n' (or 'make -t' or 'make -q') when commands are not normally executed. See also the POSIX specification for make and also §9.3 of the GNU Make manual.
+
+The + notation is a (POSIX-standardized) generalization of the de facto (non-standardized) mechanism whereby a command line containing ${MAKE} or $(MAKE) is executed under make -n.
+
+(@ is discussed in §5.2 of the GNU Make manual; - is described in §5.5; and §5.7.1 mentions the use of +.)
+
+
+
+
+When called with the --no-print-directory option, GNU make will disable printing of the working directory by invoked sub- make s (the well-known “Entering/Leaving directory …” messages).
