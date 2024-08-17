@@ -1,0 +1,14 @@
+CXXFLAGS=-std=c++23 -Wl,-rpath ${LD_LIBRARY_PATH} -Wall -lstdc++exp --enable-libstdcxx-backtrace
+
+.PHONY: all
+
+SRCS := $(wildcard *.cc)
+PRGS := $(patsubst %.cc,%,$(SRCS))
+
+all: $(PRGS)
+
+$(PRGS): %: %.cc
+	${CXX} ${CXXFLAGS} $< -o $@
+
+clean:
+	rm -rf $(PRGS)
