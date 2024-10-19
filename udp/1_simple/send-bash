@@ -1,0 +1,3 @@
+#!/bin/bash
+echo "Hello" >/dev/udp/localhost/8080
+
