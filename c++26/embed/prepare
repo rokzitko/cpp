@@ -1,0 +1,2 @@
+#!/bin/sh
+head -c 100 /dev/random > random.bin
