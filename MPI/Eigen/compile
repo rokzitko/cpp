@@ -1,0 +1,7 @@
+#!/bin/sh
+ml purge
+ml foss
+ml Boost
+ml Boost.MPI
+ml Eigen
+make
