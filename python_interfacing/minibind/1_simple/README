@@ -1,0 +1,22 @@
+https://nanobind.readthedocs.io/en/latest/installing.html
+python -m pip install nanobind
+
+python --version
+Python 3.12.7
+
+Ubuntu 18.04:
+cmake --version
+cmake version 3.10.2
+TOO OLD!
+
+conda install cmake
+
+which cmake
+/home/rok/miniconda3/bin/cmake
+cmake --version
+cmake version 4.1.0
+
+https://nanobind.readthedocs.io/en/latest/classes.html
+https://nanobind.readthedocs.io/en/latest/functions.html
+https://nanobind.readthedocs.io/en/latest/ownership.html
+https://nanobind.readthedocs.io/en/latest/exchanging.html
