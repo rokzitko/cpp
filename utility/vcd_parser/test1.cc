@@ -1,0 +1,45 @@
+#include <iostream>
+#include <string>
+#include <sstream>
+
+#include "vcd_parser.hh"
+
+int main()
+{
+  std::istringstream iss(
+R"VCD($date
+        Sat Mar  7 23:22:53 2026
+$end
+$version
+        Icarus Verilog
+$end
+$timescale
+        1ns
+$end
+$scope module tb_presence_detector $end
+$var reg 32 ! outs [31:0] $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 !
+$end
+#1
+b1000000000000 !
+#3
+b0 !
+#13
+b1111 !
+#33
+b1110 !
+#500
+)VCD");
+
+  auto v = parseVcdUpdates(iss, "outs");
+  for (const auto& x : v) {
+    std::cout << "(" << x.value << ", " << x.count << ")\n";
+  }
+}
